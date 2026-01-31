@@ -1,0 +1,5 @@
+package com.infy.ems.entity;
+
+public class Employee {
+
+}
