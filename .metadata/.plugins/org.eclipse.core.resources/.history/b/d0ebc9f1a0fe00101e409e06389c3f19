@@ -1,0 +1,5 @@
+package com.infy.ems.dto;
+
+public class EmployeeRequestDTO {
+
+}
