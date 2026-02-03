@@ -42,32 +42,24 @@ public class EmployeeController {
 	   }
 
 	@GetMapping("/employees")
-    public ResponseEntity<ApiResponse<List<Employee>>> getAll(){
-		List<Employee> list=theEmployeeService.findAll();
-		ApiResponse<List<Employee>> response=new ApiResponse<>("SUCCESS", "Employees fetched successfully ", list);
-		return ResponseEntity.ok(response);
+    public List<Employee> getAll(){
+		return theEmployeeService.findAll();
 	}
 	
 	  @GetMapping("/employees/{id}")
-	   public ResponseEntity<ApiResponse<Employee>> getEmployee(@PathVariable Long id) {
-		  Employee emp=theEmployeeService.getEmployeeById(id);
-		  ApiResponse<Employee> response=new ApiResponse<>("SUCCESS", "Employee fetched successfully ", emp);
-	       return new ResponseEntity<>(response,HttpStatus.FOUND);
+	   public Employee getEmployee(@PathVariable Long id) {
+	       return theEmployeeService.getEmployeeById(id);
 	   }
 
 	   @PutMapping("/employees/{id}")
-	   public ResponseEntity<ApiResponse<Employee>> updateEmployee(@PathVariable Long id,
+	   public Employee updateEmployee(@PathVariable Long id,
 	                                   @Valid @RequestBody EmployeeRequestDTO dto) {
-		   Employee updated=theEmployeeService.updateEmployee(id, dto);
-		   ApiResponse<Employee> response=new ApiResponse<>("SUCCESS", "Employee updated successfully", updated);
-	       return ResponseEntity.ok(response);
+	       return theEmployeeService.updateEmployee(id, dto);
 	   }
 
 	   @DeleteMapping("/employees/{id}")
-	   public ResponseEntity<ApiResponse<Void>> deleteEmployee(@PathVariable Long id) {
+	   public void deleteEmployee(@PathVariable Long id) {
 	       theEmployeeService.deleteEmployee(id);
-	       ApiResponse<Void> response =new ApiResponse<>("SUCCESS", "Employee deleted successfully", null);
-	       return ResponseEntity.ok(response);
 	   }
 
 }

@@ -56,18 +56,14 @@ public class EmployeeController {
 	   }
 
 	   @PutMapping("/employees/{id}")
-	   public ResponseEntity<ApiResponse<Employee>> updateEmployee(@PathVariable Long id,
+	   public Employee updateEmployee(@PathVariable Long id,
 	                                   @Valid @RequestBody EmployeeRequestDTO dto) {
-		   Employee updated=theEmployeeService.updateEmployee(id, dto);
-		   ApiResponse<Employee> response=new ApiResponse<>("SUCCESS", "Employee updated successfully", updated);
-	       return ResponseEntity.ok(response);
+	       return theEmployeeService.updateEmployee(id, dto);
 	   }
 
 	   @DeleteMapping("/employees/{id}")
-	   public ResponseEntity<ApiResponse<Void>> deleteEmployee(@PathVariable Long id) {
+	   public void deleteEmployee(@PathVariable Long id) {
 	       theEmployeeService.deleteEmployee(id);
-	       ApiResponse<Void> response =new ApiResponse<>("SUCCESS", "Employee deleted successfully", null);
-	       return ResponseEntity.ok(response);
 	   }
 
 }
