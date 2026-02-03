@@ -1,6 +1,7 @@
 package com.infy.ems.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.infy.ems.dto.EmployeeRequestDTO;
 import com.infy.ems.entity.Employee;
@@ -10,7 +11,7 @@ public interface EmployeeService {
 	public List<Employee> findAll();
 	 public Employee createEmployee(EmployeeRequestDTO dto);
 	 public Employee getEmployeeById(Long id) ;
-	 public Employee updateEmployee(Long id, Employee employee);
+	 public Employee updateEmployee(Long id, EmployeeRequestDTO dto);
 	 public void deleteEmployee(Long id); 
 
 }

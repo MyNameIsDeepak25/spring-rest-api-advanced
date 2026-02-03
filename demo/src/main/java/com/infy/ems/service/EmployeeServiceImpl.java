@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.infy.ems.dto.EmployeeRequestDTO;
 import com.infy.ems.entity.Employee;
+import com.infy.ems.exception.EmployeeNotFoundException;
 import com.infy.ems.repository.EmployeeRepository;
 
 @Service
@@ -43,21 +44,25 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Override
 	public Employee getEmployeeById(Long id) {
 		// TODO Auto-generated method stub
-		return theEmployeeRepository.findById(id).orElse(null);
+		return theEmployeeRepository.findById(id).orElseThrow(()->new EmployeeNotFoundException("Employee not found with id:" + id));
 	}
 
 
 	@Override
-	public Employee updateEmployee(Long id, Employee employee) {
-         employee.setEmployeeId(id);
-		return theEmployeeRepository.save(employee);
+	public Employee updateEmployee(Long id, EmployeeRequestDTO dto) {
+         Employee existing=getEmployeeById(id);
+         existing.setName(dto.getName());
+         existing.setDepartment(dto.getDepartment());
+         existing.setSalary(dto.getSalary());
+         return theEmployeeRepository.save(existing);
 	}
 
 
 	@Override
 	public void deleteEmployee(Long id) {
 
-        theEmployeeRepository.deleteById(id);
+		Employee emp=getEmployeeById(id);
+        theEmployeeRepository.delete(emp);
 	}
 	
 	
