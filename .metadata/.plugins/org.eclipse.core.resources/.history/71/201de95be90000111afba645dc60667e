@@ -11,17 +11,14 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.infy.ems.response.ApiResponse;
-
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler 
-	public ResponseEntity<ApiResponse<ErrorResponse>> handleEmployeeNotFoundException(EmployeeNotFoundException ex){
+	public ResponseEntity<ErrorResponse> handleEmployeeNotFoundException(EmployeeNotFoundException ex){
 		ErrorResponse error=new ErrorResponse(
 				ex.getMessage(), HttpStatus.NOT_FOUND.value(), LocalDate.now());
-		ApiResponse<ErrorResponse> response=new ApiResponse<>("FAILURE", "Employee with given id is not found ", error);
-		return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler
@@ -33,12 +30,11 @@ public class GlobalExceptionHandler {
     }
 	
 	@ExceptionHandler
-	public ResponseEntity<ApiResponse<Map<String, String>>> handleValidationException(MethodArgumentNotValidException ex){
+	public ResponseEntity<Map<String, String>> handleValidationException(MethodArgumentNotValidException ex){
 		Map<String, String> errors=new HashMap<>();
 		ex.getBindingResult().getFieldErrors().forEach(error->
 		errors.put(error.getField(), error.getDefaultMessage())
 				);
-		ApiResponse<Map<String, String>> response=new ApiResponse<>("FAILURE", "Validation is failed ", errors);
-		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(errors,HttpStatus.BAD_REQUEST);
 	}
 }

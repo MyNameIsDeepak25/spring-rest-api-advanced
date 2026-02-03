@@ -17,11 +17,10 @@ import com.infy.ems.response.ApiResponse;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler 
-	public ResponseEntity<ApiResponse<ErrorResponse>> handleEmployeeNotFoundException(EmployeeNotFoundException ex){
+	public ResponseEntity<ErrorResponse> handleEmployeeNotFoundException(EmployeeNotFoundException ex){
 		ErrorResponse error=new ErrorResponse(
 				ex.getMessage(), HttpStatus.NOT_FOUND.value(), LocalDate.now());
-		ApiResponse<ErrorResponse> response=new ApiResponse<>("FAILURE", "Employee with given id is not found ", error);
-		return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler
