@@ -63,9 +63,15 @@ public class EmployeeController {
 	       return ResponseEntity.ok(response);
 	   }
 
- 
+//	   In a PATCH API, we do not use @Valid on the request body because PATCH is meant for partial updates, 
+//	   where missing fields are intentional and should not be treated as invalid. Validation annotations are designed 
+//	   for full-object validation and would incorrectly reject valid partial update requests. Instead, 
+//	   we handle validation conditionally in the service layer by checking each field 
+//	   for null and validating only those fields that are present. 
+//	   This approach respects client intent, prevents accidental data overwrite, and results in safer, business-aware update APIs.
+//	   
 	   @PatchMapping("/employees/{id}")
-	   public ResponseEntity<ApiResponse<Employee>> patchEmployee(@PathVariable Long id, @Valid @RequestBody EmployeePatchDTO dto){
+	   public ResponseEntity<ApiResponse<Employee>> patchEmployee(@PathVariable Long id, @RequestBody EmployeePatchDTO dto){
 		   Employee updated=theEmployeeService.patchEmployee(id, dto);
 		   ApiResponse<Employee> response= new ApiResponse<>("SUCCESS", "Employee partially updated ", updated);
 		   return ResponseEntity.ok(response);

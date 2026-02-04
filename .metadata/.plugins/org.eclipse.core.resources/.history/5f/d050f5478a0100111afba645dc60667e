@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.infy.ems.dto.EmployeePatchDTO;
 import com.infy.ems.dto.EmployeeRequestDTO;
 import com.infy.ems.entity.Employee;
 import com.infy.ems.exception.EmployeeNotFoundException;
@@ -60,41 +59,11 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 
 	@Override
-	public Employee patchEmployee(Long id, EmployeePatchDTO dto) {
-		// TODO Auto-generated method stub
-		Employee existing=getEmployeeById(id);
-		
-
-		   if (dto.getName() != null) {
-		       existing.setName(dto.getName());
-		   }
-
-		   if (dto.getEmail() != null) {
-		       existing.setEmail(dto.getEmail());
-		   }
-
-		   if (dto.getDepartment() != null) {
-		       existing.setDepartment(dto.getDepartment());
-		   }
-
-		   if (dto.getSalary() != null) {
-		       existing.setSalary(dto.getSalary());
-		   }
-
-		   return theEmployeeRepository.save(existing);
-
-		
-	}
-	
-	@Override
 	public void deleteEmployee(Long id) {
 
 		Employee emp=theEmployeeRepository.findById(id).orElseThrow(()->new EmployeeNotFoundException("Employee not found with id: " + id));
         theEmployeeRepository.delete(emp);
 	}
-
-
-	
 	
 	
 	
