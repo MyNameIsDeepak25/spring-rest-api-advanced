@@ -1,0 +1,1 @@
+2026-02-11T10:58:53.909+05:30  WARN 20596 --- [demo] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
