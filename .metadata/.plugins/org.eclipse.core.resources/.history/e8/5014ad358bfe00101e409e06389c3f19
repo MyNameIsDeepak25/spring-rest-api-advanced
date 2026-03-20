@@ -1,5 +1,0 @@
-package com.infy.ems.repository;
-
-public interface EmployeeRepository {
-
-}

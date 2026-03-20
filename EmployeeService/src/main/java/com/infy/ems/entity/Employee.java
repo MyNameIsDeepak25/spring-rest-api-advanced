@@ -1,9 +1,12 @@
 package com.infy.ems.entity;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,14 +21,22 @@ public class Employee {
 	   private String department;
 	   private double salary;
 	   
+	   @OneToOne
+	   @JoinColumn(name = "emp_address_id")
+	   private Address address;
+	   
+	   
+	   
+	   
 	   
 	public Employee() {
 	}
-	public Employee( String name, String email, String department, double salary) {
+	public Employee( String name, String email, String department, double salary, Address address) {
 		this.name = name;
 		this.email = email;
 		this.department = department;
 		this.salary = salary;
+		this.address=address;
 	}
 	public Long getEmployeeId() {
 		return employeeId;
@@ -57,11 +68,19 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
+	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	@Override
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", name=" + name + ", email=" + email + ", department="
-				+ department + ", salary=" + salary + "]";
+				+ department + ", salary=" + salary + ", address=" + address + "]";
 	}
+	
 	   
 	   
  

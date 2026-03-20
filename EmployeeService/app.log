@@ -1,1 +1,141 @@
-2026-02-11T10:58:53.909+05:30  WARN 20596 --- [demo] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-02-24T10:14:16.020+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Starting DemoApplication using Java 17.0.4.1 with PID 24048 (C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService\target\classes started by Expert in C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService)
+2026-02-24T10:14:16.051+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-02-24T10:14:16.246+05:30  INFO 24048 --- [demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-24T10:14:16.247+05:30  INFO 24048 --- [demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-24T10:14:18.687+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-24T10:14:18.805+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interface.
+2026-02-24T10:14:19.228+05:30  INFO 24048 --- [demo] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8ad0ae05-ff00-32f9-89b1-c7a1f6579c3d
+2026-02-24T10:14:20.932+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-24T10:14:20.959+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-24T10:14:20.961+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-02-24T10:14:21.085+05:30  INFO 24048 --- [demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-24T10:14:21.087+05:30  INFO 24048 --- [demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4837 ms
+2026-02-24T10:14:21.714+05:30  INFO 24048 --- [demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-24T10:14:21.841+05:30  INFO 24048 --- [demo] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-02-24T10:14:21.911+05:30  INFO 24048 --- [demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-24T10:14:22.652+05:30  INFO 24048 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-24T10:14:22.707+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-24T10:14:23.199+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42d55f51
+2026-02-24T10:14:23.205+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-24T10:14:25.099+05:30  INFO 24048 --- [demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24T10:14:25.470+05:30  INFO 24048 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:14:26.186+05:30  WARN 24048 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-24T10:14:26.271+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-24T10:14:27.912+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-02-24T10:14:28.046+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-24T10:14:28.247+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Started DemoApplication in 13.161 seconds (process running for 14.278)
+2026-02-24T10:14:37.188+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-24T10:14:37.188+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-24T10:14:37.199+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2026-02-24T10:15:52.344+05:30  WARN 24048 --- [demo] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-02-24T10:17:05.766+05:30  INFO 24048 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-24T10:17:05.948+05:30  INFO 24048 --- [demo] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:17:05.957+05:30  INFO 24048 --- [demo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-24T10:17:05.988+05:30  INFO 24048 --- [demo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-24T10:17:06.389+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Starting DemoApplication using Java 17.0.4.1 with PID 24048 (C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService\target\classes started by Expert in C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService)
+2026-02-24T10:17:06.390+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-02-24T10:17:07.170+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-24T10:17:07.211+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
+2026-02-24T10:17:07.379+05:30  INFO 24048 --- [demo] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8ad0ae05-ff00-32f9-89b1-c7a1f6579c3d
+2026-02-24T10:17:07.696+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-24T10:17:07.698+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-24T10:17:07.698+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-02-24T10:17:07.776+05:30  INFO 24048 --- [demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-24T10:17:07.777+05:30  INFO 24048 --- [demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1382 ms
+2026-02-24T10:17:08.221+05:30  INFO 24048 --- [demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-24T10:17:08.233+05:30  INFO 24048 --- [demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-24T10:17:08.295+05:30  INFO 24048 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-24T10:17:08.298+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-02-24T10:17:08.375+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18dd558d
+2026-02-24T10:17:08.378+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-02-24T10:17:08.640+05:30  INFO 24048 --- [demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24T10:17:08.752+05:30  INFO 24048 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:17:09.000+05:30  WARN 24048 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-24T10:17:09.049+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-24T10:17:09.769+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-02-24T10:17:09.830+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-24T10:17:10.037+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Started DemoApplication in 3.923 seconds (process running for 176.067)
+2026-02-24T10:17:10.043+05:30  INFO 24048 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-24T10:17:14.558+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-24T10:17:14.558+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-24T10:17:14.559+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-24T10:17:56.075+05:30  INFO 24048 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-24T10:17:56.163+05:30  INFO 24048 --- [demo] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:17:56.164+05:30  INFO 24048 --- [demo] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-02-24T10:17:56.170+05:30  INFO 24048 --- [demo] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-02-24T10:17:56.420+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Starting DemoApplication using Java 17.0.4.1 with PID 24048 (C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService\target\classes started by Expert in C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService)
+2026-02-24T10:17:56.420+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-02-24T10:17:56.888+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-24T10:17:56.910+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+2026-02-24T10:17:57.027+05:30  INFO 24048 --- [demo] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8ad0ae05-ff00-32f9-89b1-c7a1f6579c3d
+2026-02-24T10:17:57.232+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-24T10:17:57.233+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-24T10:17:57.234+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-02-24T10:17:57.295+05:30  INFO 24048 --- [demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-24T10:17:57.295+05:30  INFO 24048 --- [demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 871 ms
+2026-02-24T10:17:57.476+05:30  INFO 24048 --- [demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-24T10:17:57.479+05:30  INFO 24048 --- [demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-24T10:17:57.493+05:30  INFO 24048 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-24T10:17:57.494+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-02-24T10:17:57.514+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@542da514
+2026-02-24T10:17:57.515+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-02-24T10:17:57.597+05:30  INFO 24048 --- [demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24T10:17:57.622+05:30  INFO 24048 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:17:57.786+05:30  WARN 24048 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-24T10:17:57.845+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-24T10:17:58.829+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-02-24T10:17:58.896+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-24T10:17:59.066+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Started DemoApplication in 2.837 seconds (process running for 225.097)
+2026-02-24T10:17:59.070+05:30  INFO 24048 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-24T10:18:00.417+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-24T10:18:00.417+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-24T10:18:00.418+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-24T10:19:56.490+05:30  INFO 24048 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-24T10:19:56.587+05:30  INFO 24048 --- [demo] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:19:56.589+05:30  INFO 24048 --- [demo] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-02-24T10:19:56.601+05:30  INFO 24048 --- [demo] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-02-24T10:19:56.849+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Starting DemoApplication using Java 17.0.4.1 with PID 24048 (C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService\target\classes started by Expert in C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService)
+2026-02-24T10:19:56.849+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-02-24T10:19:57.262+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-24T10:19:57.276+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2026-02-24T10:19:57.337+05:30  INFO 24048 --- [demo] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8ad0ae05-ff00-32f9-89b1-c7a1f6579c3d
+2026-02-24T10:19:57.503+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-24T10:19:57.506+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-24T10:19:57.515+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-02-24T10:19:57.562+05:30  INFO 24048 --- [demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-24T10:19:57.563+05:30  INFO 24048 --- [demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 712 ms
+2026-02-24T10:19:57.797+05:30  INFO 24048 --- [demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-24T10:19:57.803+05:30  INFO 24048 --- [demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-24T10:19:57.818+05:30  INFO 24048 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-24T10:19:57.821+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-02-24T10:19:57.850+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e8b98bd
+2026-02-24T10:19:57.850+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-02-24T10:19:57.957+05:30  INFO 24048 --- [demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24T10:19:58.124+05:30  INFO 24048 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:19:58.301+05:30  WARN 24048 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-24T10:19:58.337+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-24T10:19:59.063+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-02-24T10:19:59.096+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-24T10:19:59.226+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Started DemoApplication in 2.553 seconds (process running for 345.257)
+2026-02-24T10:19:59.229+05:30  INFO 24048 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-24T10:20:07.585+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-24T10:20:07.585+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-24T10:20:07.586+05:30  INFO 24048 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-24T10:52:58.984+05:30  INFO 24048 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-24T10:52:59.558+05:30  INFO 24048 --- [demo] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-24T10:52:59.560+05:30  INFO 24048 --- [demo] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-02-24T10:52:59.586+05:30  INFO 24048 --- [demo] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-02-24T10:53:00.622+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : Starting DemoApplication using Java 17.0.4.1 with PID 24048 (C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService\target\classes started by Expert in C:\Users\Expert\Desktop\Spring REST API with Advance features\EmployeeService)
+2026-02-24T10:53:00.716+05:30  INFO 24048 --- [demo] [restartedMain] com.infy.ems.DemoApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-02-24T10:53:01.959+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-24T10:53:02.016+05:30  INFO 24048 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2026-02-24T10:53:02.340+05:30  INFO 24048 --- [demo] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8ad0ae05-ff00-32f9-89b1-c7a1f6579c3d
+2026-02-24T10:53:03.064+05:30  INFO 24048 --- [demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-24T10:53:03.072+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-24T10:53:03.072+05:30  INFO 24048 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-02-24T10:53:03.243+05:30  INFO 24048 --- [demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-24T10:53:03.243+05:30  INFO 24048 --- [demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2522 ms
+2026-02-24T10:53:03.870+05:30  INFO 24048 --- [demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-24T10:53:03.885+05:30  INFO 24048 --- [demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-24T10:53:03.935+05:30  INFO 24048 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-24T10:53:03.943+05:30  INFO 24048 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...

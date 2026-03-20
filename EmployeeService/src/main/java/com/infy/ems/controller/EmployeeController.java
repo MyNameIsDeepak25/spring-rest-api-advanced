@@ -21,6 +21,7 @@ import com.infy.ems.dto.EmployeeRequestDTO;
 import com.infy.ems.entity.Employee;
 import com.infy.ems.response.ApiResponse;
 import com.infy.ems.service.EmployeeService;
+import com.infy.ems.service.dto.EmployeeWithLeavesResponse;
 
 import jakarta.validation.Valid;
 
@@ -83,6 +84,11 @@ public class EmployeeController {
 	       theEmployeeService.deleteEmployee(id);
 	       ApiResponse<Void> response =new ApiResponse<>("SUCCESS", "Employee deleted successfully", null);
 	       return ResponseEntity.ok(response);
+	   }
+	   
+	   @GetMapping("/{id}/details")
+	   public EmployeeWithLeavesResponse getEmployeeDetails(@PathVariable Long id) {
+	       return theEmployeeService.getEmployeeWithLeaves(id);
 	   }
 
 }

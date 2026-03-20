@@ -7,11 +7,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.infy.ems.client.LeaveClient;
 import com.infy.ems.dto.EmployeePatchDTO;
 import com.infy.ems.dto.EmployeeRequestDTO;
+import com.infy.ems.dto.LeaveResponseDTO;
 import com.infy.ems.entity.Employee;
 import com.infy.ems.exception.EmployeeNotFoundException;
 import com.infy.ems.repository.EmployeeRepository;
+import com.infy.ems.service.dto.EmployeeWithLeavesResponse;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
@@ -20,11 +23,14 @@ public class EmployeeServiceImpl implements EmployeeService{
             LoggerFactory.getLogger(EmployeeService.class);
 	
 	private EmployeeRepository theEmployeeRepository;
+	private final LeaveClient leaveClient;
+
 
 	
 	@Autowired
-	public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository) {
+	public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository, LeaveClient leaveClient) {
 		this.theEmployeeRepository = theEmployeeRepository;
+		this.leaveClient = leaveClient;
 	}
 
 
@@ -91,7 +97,15 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 		
 	}
-	
+	 public EmployeeWithLeavesResponse getEmployeeWithLeaves(Long id) {
+
+	        Employee employee = theEmployeeRepository.findById(id)
+	                .orElseThrow(() -> new RuntimeException("Employee not found"));
+
+	        List<LeaveResponseDTO> leaves = leaveClient.getLeaves(id);
+
+	        return new EmployeeWithLeavesResponse(employee, leaves);
+	    }
 	@Override
 	public void deleteEmployee(Long id) {
 
