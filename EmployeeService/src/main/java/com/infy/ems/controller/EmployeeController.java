@@ -86,7 +86,7 @@ public class EmployeeController {
 	       return ResponseEntity.ok(response);
 	   }
 	   
-	   @GetMapping("/{id}/details")
+	   @GetMapping("employees/{id}/leavedetails")
 	   public EmployeeWithLeavesResponse getEmployeeDetails(@PathVariable Long id) {
 	       return theEmployeeService.getEmployeeWithLeaves(id);
 	   }

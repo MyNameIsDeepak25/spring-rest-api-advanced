@@ -13,5 +13,6 @@ public interface LeaveClient {
     
 	@GetMapping ("/leave/employee/{employeeId}")
 	List<LeaveResponseDTO>  getLeaves(@RequestParam("employeeId")  Long employeeId);
-		
+	
+
 }
