@@ -5,6 +5,10 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.infy.ems.client.LeaveClient;
@@ -34,11 +38,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 
-	@Override
-	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
-		return theEmployeeRepository.findAll();
-	}
+	
 
 
 	@Override
@@ -111,6 +111,15 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 		Employee emp=theEmployeeRepository.findById(id).orElseThrow(()->new EmployeeNotFoundException("Employee not found with id: " + id));
         theEmployeeRepository.delete(emp);
+	}
+
+
+	@Override
+	public Page<Employee> findAll(int page, int size) {
+		// TODO Auto-generated method stub
+      Pageable pageable = PageRequest.of(page, size);
+      return theEmployeeRepository.findAll(pageable);
+
 	}
 
 

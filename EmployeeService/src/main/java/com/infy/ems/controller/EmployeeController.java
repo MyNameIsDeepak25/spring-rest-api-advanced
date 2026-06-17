@@ -6,6 +6,7 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;import com.infy.ems.dto.EmployeePatchDTO;
 import com.infy.ems.dto.EmployeeRequestDTO;
 import com.infy.ems.entity.Employee;
@@ -47,12 +49,13 @@ public class EmployeeController {
 	   }
 
 	@GetMapping("/employees")
-    public ResponseEntity<ApiResponse<List<Employee>>> getAll(){
-		List<Employee> list=theEmployeeService.findAll();
-		ApiResponse<List<Employee>> response=new ApiResponse<>("SUCCESS", "Employees fetched successfully ", list);
+    public Page<Employee> findAll(@RequestParam(defaultValue = "0") int page,
+    		
+    		@RequestParam(defaultValue = "5") int size){
+		return theEmployeeService.findAll(page, size);
 		
-		return ResponseEntity.ok(response);
 	}
+	
 	
 	  @GetMapping("/employees/{id}")
 	   public ResponseEntity<ApiResponse<Employee>> getEmployee(@PathVariable Long id) {
