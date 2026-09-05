@@ -89,6 +89,11 @@ public class EmployeeController {
 	       return ResponseEntity.ok(response);
 	   }
 	   
+	   @GetMapping("/employees/search")
+	   public List<Employee> findByEmployeeName(@RequestParam String name){
+		   return theEmployeeService.findByName(name);
+		   
+	   }
 	   @GetMapping("employees/{id}/leavedetails")
 	   public EmployeeWithLeavesResponse getEmployeeDetails(@PathVariable Long id) {
 	       return theEmployeeService.getEmployeeWithLeaves(id);
