@@ -20,5 +20,6 @@ public interface EmployeeService {
 	 public Employee patchEmployee(Long id, EmployeePatchDTO dto);
 	 public void deleteEmployee(Long id); 
 	 public EmployeeWithLeavesResponse getEmployeeWithLeaves(Long id);
+	 public List<Employee> findByName(String name);
 
 }

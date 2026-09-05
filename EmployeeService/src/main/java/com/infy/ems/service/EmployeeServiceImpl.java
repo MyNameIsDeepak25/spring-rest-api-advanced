@@ -123,6 +123,18 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 
+
+
+
+	@Override
+	public List<Employee> findByName(String name) {
+		// TODO Auto-generated method stub
+		
+		List<Employee> employees = theEmployeeRepository.findByNameContainingIgnoreCase(name);
+		return employees;
+	}
+
+
 	
 	
 	
